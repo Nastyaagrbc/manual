@@ -35,12 +35,7 @@ main {
     
 }
 
-.fotoya {
-    border-radius: 400px;
-    width: 250px;
-    height: 250px;
-    margin-bottom: 60px;
-}
+
 
 .header {
     width: 1000px;
@@ -50,6 +45,19 @@ main {
     padding-bottom: 50px;
 }
 
+.fotoya {
+    /* border-radius: 400px; */
+    width: 250px;
+    height: 250px;
+    margin-bottom: 60px;
+    border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+.fotoya:hover {
+    -webkit-transform: rotate(360deg); /* Градусы поворота можно изменить по необходимости */
+            transform: rotate(360deg); /* Градусы поворота можно изменить по необходимости */
+  }
 
 .title-list {
     width: 500px;
@@ -79,4 +87,199 @@ footer {
     background-color: #901C12;
     height: 40px;
     text-align: center;
+}
+
+.podsvetka :hover {
+    box-shadow: 0px -2px 134px 53px rgba(255, 0, 0, 0.25);
+    border-radius: 400px;
+    width: 250px;
+    height: 250px;
+    
+}
+body {
+	touch-action: pan-y;
+}
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #222;
+	display: grid;
+	grid-template-rows: 60% 40%;
+}
+
+#maze {
+	position: absolute;
+	width: 340px;
+	height: 240px;
+	/*background: #39a;
+	
+	align-self: center;
+	justify-self: center;
+	place-self: center center;*/
+	top: 30vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mbox,
+.controls {
+	height: 100%;
+	background: #222;
+	display: grid;
+}
+
+.buttons {
+	width: 210px;
+	height: 140px;
+	background: #222;
+	align-self: center;
+	justify-self: center;
+	display: grid;
+	grid-template-rows: 70px 70px;
+	grid-template-columns: 70px 70px 70px;
+}
+
+.btn {
+	width: 60px;
+	height: 60px;
+	border: 2px #fff solid;
+	border-bottom: 2px #fff solid;
+	align-self: center;
+	justify-self: center;
+	cursor: pointer;
+	border-radius: 8px;
+	display: grid;
+	/*box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);*/
+}
+.chevron {
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	color: #222;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+}
+
+#bu {
+	grid-column-start: 2;
+}
+#bd {
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+#bl {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+#br {
+	grid-column-start: 3;
+	grid-row-start: 2;
+}
+
+#thingie,
+#home {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	/*background: #39a;
+	transition: all .1s;*/
+}
+
+.emo {
+	position: absolute;
+	top: 4px;
+	left: 1px;
+	width: 13px;
+	height: 13px;
+	border-radius: 20px;
+	font-size: 15px;
+	line-height: 15px;
+	text-align: left;
+}
+
+.barrier {
+	position: absolute;
+	background: #fff;
+}
+
+#top {
+	top: 20px;
+	left: 20px;
+	width: 300px;
+	height: 2px;
+}
+
+#bottom {
+	top: 220px;
+	left: 20px;
+	width: 302px;
+	height: 2px;
+}
+
+/*style reset*/
+button {
+	display: inline-block;
+	border: none;
+	padding: none;
+	margin: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+button:hover,
+button:focus {
+	-webkit-appearance: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+button:active {
+	transform: scale(1);
+	-webkit-appearance: none;
+}
+
+.game {
+    text-align: center;
+    margin-bottom: 70px;
+    color: #80200d; /* Цвет  текста */
+  font-size: 2em; /* Размер  текста */
+  font-weight: bold;
+  padding: 20px 0px;
+  text-transform: uppercase;
+  line-height: 1;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+    
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a :hover {
+    color: #ffa000; /* Меняем цвет текста */
+    -webkit-text-shadow: 2px 2px 2px rgb(214, 54, 54);
+    -moz-text-shadow: 2px 2px 2px rgb(212, 39, 39);
+        text-shadow: 2px 2px 2px rgb(201, 42, 42);
+}
+
+.gamebtn {
+    position: absolute;
+    z-index: 99999;
+    padding: 20px;
 }
